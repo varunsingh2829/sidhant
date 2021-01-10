@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gallery</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Vollkorn:wght@500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+<script type="text/javascript" src="js\bootstrap.min.js"></script> -->
+	<link rel="stylesheet" href="css/gallerystyle.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+</head>
+<body>
+  <header>
+<nav class="navbar navbar-expand-lg navbar-light firstnav">
+  
+  <a class="navbar-brand" href="index.html"><img class="logo" src="image/logo.png" alt="logo"></a>
+  <ul class="navbar-nav ml-auto  mt-1 mr-lg-5 mr-1 mt-lg-0">
+      <li class="nav-item  ">
+        <button type="button" class="btn jion-btn" data-target="#mymodal" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="40" height="40"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none" stroke="none" stroke-width="1"></path><g stroke="none" stroke-width="1"><path d="M5.375,153.725c0.645,-24.94 21.5,-45.15 47.3,-45.15h32.25c25.8,0 46.655,20.21 47.3,45.15z" fill="#8bb7f0"></path><path d="M84.925,109.65c24.725,0 44.935,19.135 46.225,43h-124.7c1.075,-23.865 21.5,-43 46.225,-43h32.25M84.925,107.5h-32.25c-26.66,0 -48.375,21.07 -48.375,47.3v0h129v0c0,-26.23 -21.715,-47.3 -48.375,-47.3z" fill="#4e7ab5"></path><path d="M68.8,123.625c-14.19,0 -19.78,-12.685 -20.425,-14.405v-24.725h40.85v24.725c-0.645,1.72 -6.02,14.405 -20.425,14.405z" fill="#deb974"></path><path d="M88.15,85.57v23.435c-0.86,2.15 -6.02,13.33 -19.35,13.33c-13.33,0 -18.49,-11.395 -19.35,-13.33v-23.435h38.7M90.3,83.42h-43v26.015c0,0 5.375,15.265 21.5,15.265c16.125,0 21.5,-15.265 21.5,-15.265v-26.015z" fill="#967a44"></path><path d="M96.535,76.97c-5.59,0 -9.89,-4.515 -9.89,-9.89c0,-5.59 4.515,-9.89 9.89,-9.89c7.095,0 9.89,1.72 9.89,6.235c0,5.16 -4.515,13.545 -9.89,13.545zM41.065,76.97c-5.59,0 -9.89,-8.17 -9.89,-13.76c0,-4.515 2.795,-6.235 9.89,-6.235c5.59,0 9.89,4.515 9.89,9.89c0,5.375 -4.3,10.105 -9.89,10.105z" fill="#deb974"></path><path d="M96.535,58.05c7.525,0 8.815,1.935 8.815,5.16c0,5.375 -4.3,12.685 -8.815,12.685c-4.945,0 -8.815,-4.085 -8.815,-8.815c0,-4.73 3.87,-9.03 8.815,-9.03M41.065,58.05c4.945,0 8.815,4.085 8.815,8.815c0,4.73 -4.085,8.815 -8.815,8.815c-4.515,0 -8.815,-7.31 -8.815,-12.685c0,-3.01 1.505,-4.945 8.815,-4.945M96.535,55.9c-6.02,0 -10.965,4.945 -10.965,10.965c0,6.02 4.945,10.965 10.965,10.965c6.02,0 10.965,-8.6 10.965,-14.835c0,-6.235 -4.945,-7.095 -10.965,-7.095zM41.065,55.9c-6.02,0 -10.965,1.29 -10.965,7.31c0,6.02 4.945,14.835 10.965,14.835c6.02,0 10.965,-4.945 10.965,-10.965c0,-6.02 -4.73,-11.18 -10.965,-11.18z" fill="#967a44"></path><path d="M68.8,106.425c-2.795,0 -5.375,-1.075 -7.525,-3.01l-0.215,-0.215h-0.215c-12.47,-3.44 -21.07,-15.05 -21.07,-27.95v-35.045c0,-7.31 6.02,-13.33 13.33,-13.33h31.605c7.31,0 13.33,6.02 13.33,13.33v35.045c0,12.9 -8.6,24.295 -21.07,27.95h-0.215l-0.215,0.215c-2.365,1.935 -4.945,3.01 -7.74,3.01z" fill="#f5ce85"></path><path d="M84.495,28.165c6.665,0 12.255,5.375 12.255,12.255v34.83c0,12.47 -8.385,23.435 -20.21,26.875l-0.43,0.215l-0.43,0.43c-1.72,1.72 -4.3,2.795 -6.665,2.795c-2.365,0 -4.945,-0.86 -6.665,-2.795l-0.43,-0.43l-0.43,-0.215c-12.255,-3.44 -20.64,-14.405 -20.64,-26.875v-35.045c0,-6.665 5.375,-12.255 12.255,-12.255l31.39,0.215M84.495,26.015h-31.39c-7.955,0 -14.405,6.45 -14.405,14.405v34.83c0,13.76 9.245,25.37 21.93,29.025c2.15,2.15 4.945,3.225 8.17,3.225c3.225,0 6.02,-1.29 8.17,-3.225c12.685,-3.655 21.93,-15.265 21.93,-29.025v-35.045c0,-7.955 -6.45,-14.19 -14.405,-14.19z" fill="#967a44"></path><g><path d="M97.825,67.725v-16.125c0,-14.405 -11.395,-18.275 -11.395,-18.275l-0.645,-0.215l-0.43,0.43c-0.215,0.215 -12.47,12.47 -27.09,12.47c-1.075,0 -2.365,0 -3.44,0c-1.075,0 -2.15,0 -3.225,0c-6.02,0 -11.61,1.29 -11.61,9.89v11.825h-0.43c-1.505,-2.58 -8.17,-14.62 -8.17,-26.445c0,-21.07 15.48,-35.905 37.625,-35.905c13.975,0 20.425,12.255 20.64,12.255l0.215,0.43h0.645c11.18,1.505 16.34,9.46 16.34,24.725c0,10.965 -6.665,22.36 -8.17,24.725h-0.86z" fill="#a6714e"></path><path d="M68.8,6.45c13.33,0 19.35,11.18 19.565,11.825l0.43,1.075h1.29c6.45,0.86 15.265,4.3 15.265,23.65c0,8.385 -4.085,16.985 -6.45,21.5v-12.9c0,-7.74 -3.225,-12.685 -6.02,-15.265c-3.01,-2.795 -6.02,-3.87 -6.235,-3.87l-1.29,-0.43l-0.86,0.86c-0.215,0.215 -12.255,12.255 -26.445,12.255c-1.075,0 -2.365,0 -3.44,0c-1.075,0 -2.365,0 -3.44,0c-3.87,0 -12.685,0 -12.685,10.965v8.385c-2.365,-4.73 -6.45,-13.975 -6.45,-23.22c0.215,-20.64 15.265,-34.83 36.765,-34.83M68.8,4.3c-23.005,0 -38.7,15.695 -38.7,36.98c0,13.975 8.6,27.52 8.6,27.52h2.15c0,0 0,-9.03 0,-12.9c0,-7.74 4.73,-8.815 10.535,-8.815c2.15,0 4.515,0.215 6.665,0.215c15.265,0 27.95,-12.9 27.95,-12.9c0,0 10.75,3.44 10.75,17.2c0,4.3 0,17.2 0,17.2h2.15c0,0 8.6,-13.115 8.6,-25.8c0,-17.845 -7.31,-24.295 -17.2,-25.8c0,0 -6.665,-12.9 -21.5,-12.9z" fill="#7a4f34"></path></g><g><path d="M133.3,170.925c-20.64,0 -37.625,-16.985 -37.625,-37.625c0,-20.64 16.985,-37.625 37.625,-37.625c20.64,0 37.625,16.985 37.625,37.625c0,20.64 -16.985,37.625 -37.625,37.625z" fill="#bae0bd"></path><path d="M133.3,96.75c20.21,0 36.55,16.34 36.55,36.55c0,20.21 -16.34,36.55 -36.55,36.55c-20.21,0 -36.55,-16.34 -36.55,-36.55c0,-20.21 16.34,-36.55 36.55,-36.55M133.3,94.6c-21.285,0 -38.7,17.415 -38.7,38.7c0,21.285 17.415,38.7 38.7,38.7c21.285,0 38.7,-17.415 38.7,-38.7c0,-21.285 -17.415,-38.7 -38.7,-38.7z" fill="#5e9c76"></path></g><path d="M129,111.8h8.6v43h-8.6z" fill="#ffffff"></path><path d="M111.8,129h43v8.6h-43z" fill="#ffffff"></path></g><g fill="#f30b0b" stroke="none" stroke-width="1"><path d="M115.225,17.97v-14.28h4.25v14.28c0,1.30667 -0.29,2.46333 -0.87,3.47c-0.58,1.00667 -1.4,1.78333 -2.46,2.33c-1.05333,0.54667 -2.24667,0.82 -3.58,0.82v0c-2.18,0 -3.88,-0.55333 -5.1,-1.66c-1.21333,-1.10667 -1.82,-2.67667 -1.82,-4.71v0h4.27c0,1.01333 0.21333,1.76 0.64,2.24c0.42667,0.48 1.09667,0.72 2.01,0.72v0c0.81333,0 1.46,-0.27667 1.94,-0.83c0.48,-0.56 0.72,-1.35333 0.72,-2.38zM127.635,3.69v20.62h-4.25v-20.62zM148.505,13.55v0.92c0,2.02667 -0.36,3.80667 -1.08,5.34c-0.71333,1.52667 -1.74,2.70667 -3.08,3.54c-1.33333,0.82667 -2.86333,1.24 -4.59,1.24v0c-1.70667,0 -3.23333,-0.41 -4.58,-1.23c-1.34,-0.82 -2.37667,-1.99333 -3.11,-3.52c-0.74,-1.52 -1.11333,-3.27333 -1.12,-5.26v0v-1.02c0,-2.02667 0.36667,-3.81333 1.1,-5.36c0.73333,-1.54 1.76667,-2.72333 3.1,-3.55c1.33333,-0.82667 2.86,-1.24 4.58,-1.24c1.72,0 3.24667,0.41333 4.58,1.24c1.33333,0.82667 2.36667,2.01 3.1,3.55c0.73333,1.54667 1.1,3.33 1.1,5.35zM144.195,14.54v-1.01c0,-2.16 -0.38667,-3.8 -1.16,-4.92c-0.77333,-1.12667 -1.87667,-1.69 -3.31,-1.69v0c-1.42667,0 -2.52667,0.55667 -3.3,1.67c-0.77333,1.10667 -1.16333,2.73 -1.17,4.87v0v1.01c0,2.10667 0.38667,3.74 1.16,4.9c0.77333,1.16 1.88667,1.74 3.34,1.74v0c1.42667,0 2.52,-0.56 3.28,-1.68c0.76667,-1.12 1.15333,-2.75 1.16,-4.89zM168.355,3.69v20.62h-4.25l-8.27,-13.57v13.57h-4.24v-20.62h4.24l8.29,13.6v-13.6z"></path></g><path d="M95.645,34.59v-41.18h82.71v41.18z" fill="#ff0000" stroke="#50e3c2" stroke-width="3" opacity="0"></path></g></svg></button>
+      </li>
+  </ul>
+</nav>
+
+  
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-header secondnav" id="abc">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0  ">
+      <li class="nav-item">
+        <a class="nav-link text-white " href="index.html">Home</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-white"  href="about.html">about us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="career.html">career</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link text-white" href="services.html">services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">on the anvil</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link text-white" href="onging.html">ongoing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="associates.html">associates</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="whocanpartner.html">who can partner</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="gallery.html">gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="contact.html">contact</a>
+      </li>
+    </ul>
+   
+  </div>
+</nav>
+</header>
+
+
+
+<!-- <--------- login btn---> 
+
+
+
+<div class="modal fade" id="mymodal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times</button>
+    </div>
+    <!-- <div class="form-box"> -->
+      <div class="button-box ">
+        <div id="btn"></div>
+        
+        <button type="button" class="toggle-btn" id="login-btn" onclick="login()">login</button>
+        <button type="button" class="toggle-btn" id="signup-btn" onclick="signup()">signup</button>
+      </div>
+      
+      <form id="login" class="input-group-login">
+        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+        <input type="text" name="" class="input-field-login"  placeholder="id" >
+        <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+                <input type="password" name="" class="input-field-login" placeholder="password">
+                        
+                        <button type="button"  class="submit-btn">login</button>
+      </form>
+      <form id="signup" class="input-group-signup">
+        <input type="text" name="" class="input-field-signup" placeholder="username">
+        <input type="tel" name="" class="input-field-signup" placeholder="mobile">
+        <input type="email" name="" class="input-field-signup" placeholder="email">
+        <input type="password" name="" class="input-field-signup" placeholder="password">
+                <input type="password" name="" class="input-field-signup" placeholder="confirm password">
+                       
+                        <button type="button"  class="submit-btn">register</button>
+      </form>
+      
+    <!-- </div> -->
+    
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sidebar-contact">
+    <div class="toggle2">
+      <h3>Queries ?</h3>
+    </div>
+    <div class="sidebar-header">
+      <h2>contact us</h2>
+      <p>Please fill out the form below and we will get back to you as soon as possible.</p>
+      
+    </div>
+    
+    <form>
+      <input type="text" name="" value="" placeholder="name">
+      <input type="email" name="" value="" placeholder="email">
+      <input type="rel" name="" value="" placeholder="phone number">
+      <textarea placeholder="message"></textarea>
+      <input type="submit" name="" value="send">
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+	<div class="py-5  head-gallery">
+		<h1 class="text-center display-3" style=" font-family: 'Vollkorn', serif;">
+			GALLERY
+
+		</h1>
+    <hr class="border-light"/>
+		
+	</div>
+
+	<div class="row no-gutters gallerys">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/1.jpg" target="_blank">
+				<img src="gallery-image/1.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/2.jpg" target="_blank">
+				<img src="gallery-image/2.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/3.jpg" target="_blank">
+				<img src="gallery-image/3.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/4.jpg" target="_blank">
+				<img src="gallery-image/4.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/5.jpg" target="_blank">
+				<img src="gallery-image/5.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/6.jpg" target="_blank">
+				<img src="gallery-image/6.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/7.jpg" target="_blank">
+				<img src="gallery-image/7.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/8.jpg" target="_blank">
+				<img src="gallery-image/8.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/9.jpg" target="_blank">
+				<img src="gallery-image/9.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/10.jpg" target="_blank">
+				<img src="gallery-image/10.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/11.jpg" target="_blank">
+				<img src="gallery-image/11.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/12.jpg" target="_blank">
+				<img src="gallery-image/12.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/13.jpg" target="_blank">
+				<img src="gallery-image/13.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/14.jpg" target="_blank">
+				<img src="gallery-image/14.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/15.jpg" target="_blank">
+				<img src="gallery-image/15.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/16.jpg" target="_blank">
+				<img src="gallery-image/16.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/17.jpg" target="_blank">
+				<img src="gallery-image/17.jpg" class="img-fluid"></a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-12 img-div p-2">
+			<a href="gallery-image/18.jpg" target="_blank">
+				<img src="gallery-image/18.jpg" class="img-fluid"></a>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <-----footer----> 
+
+<div class="footer ">
+  <div class="upper-footer container-fluid">
+    <div class="row">
+    <div class="col-sm-8 uf-content">
+      <h4>We support small and medium enterprises in enhancing their capabilities.</h4>
+    </div>
+    
+   <div class="uf-btn col-sm-4">
+    <a href="contact.html" class="git-btn">Get In Touch</a>
+  </div>
+  </div>
+</div>
+
+
+  <div class="middle-footer bg-dark container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+    <div class="f-address-img">
+       <a class="navbar-brand" href="practise.html"><img class="footer-logo" src="image/footer-logo.png" alt="logo"></a>
+    </div>
+    <div class="f-address-contant">
+     <div class="row mf-rone mf-addr-r">
+  <div class="mf-aicon"><img src="https://img.icons8.com/plasticine/40/ffffff/map-marker.png"/></div>
+  <div class="mf-acontent">1-8-450/A9, Ground Floor,<br> Indian Airlines Colony,<br> Begumpet, Patigadda <br>Hyderabad - 500016</div>
+  
+</div>
+<div class="row mf-rtwo mf-addr-r">
+  <div class="mf-aicon"><img src="https://img.icons8.com/plasticine/40/ffffff/cell-phone.png"/></div>
+  <div class="mf-acontent">Phone:<a href="tel:+91-40-48538611"> 040-48538611 </a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+91-40-48538711">040-48538711 </a>
+                </div>
+  
+</div>
+<div class="row mf-rthree mf-addr-r">
+  <div class="mf-aicon"><img src="https://img.icons8.com/plasticine/40/fffffff/feedback.png"/></div>
+  <div class="mf-acontent">Email:<a href="mailto:info@ihaconsulting.in"> info@ihaconsulting.in</a></div>
+  
+</div>
+
+
+
+
+     <!--  <ol>
+        <li><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;1-8-450/A9, Ground Floor,<br> Indian Airlines Colony, Begumpet, Patigadda <br>Hyderabad - 500016</li>
+      
+      <li><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Phone: 040-48538611 <br>
+                040-48538711</li>
+      <li><i class="fas fa-envelope-open-text"></i>&nbsp;&nbsp;&nbsp;&nbsp;Email: info@ihaconsulting.in</li>
+      </ol> -->
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="f-link ">
+      <div class="row mf-qlh"><h3>Quick Links</h3></div>
+      
+      <div class="row MF-QLR">
+  <div class="mf-m-aicon"><i class="fas fa-arrow-right colochange"></i></div>
+  <div class="mf-m--acontent"><a href="about.html">About Us</a></div>
+  
+</div>
+<div class="row MF-QLR">
+  <div class="mf-m-aicon"><i class="fas fa-arrow-right"></i></div>
+  <div class="mf-m-acontent"><a href="career.html">Career</a></div>
+  
+</div>
+<div class="row MF-QLR">
+  <div class="mf-m-aicon"><i class="fas fa-arrow-right"></i></div>
+  <div class="mf-m-acontent"><a href="onging.html">On Going</a></div>
+  
+</div>
+<div class="row MF-QLR">
+  <div class="mf-m-aicon"><i class="fas fa-arrow-right"></i></div>
+  <div class="mf-m-acontent"><a href="associates.html">Associates</a></div>
+  
+</div>
+<div class="row MF-QLR">
+  <div class="mf-m-aicon"><i class="fas fa-arrow-right"></i></div>
+  <div class="mf-m-acontent"><a href="whocanpartner.html">Who Can Partner</a></div>
+  
+</div>
+<div class="row MF-QLR">
+  <div class="mf-m-aicon"><i class="fas fa-arrow-right"></i></div>
+  <div class="mf-m-acontent"><a href="gallery.html">Gallery</a></div>
+  
+</div>
+ </div>
+  </div>  
+
+  
+   
+
+
+
+  <div class="col-sm-4">
+    <div class="f-download">
+      <h3>Downloads</h3>
+      <h5 >Iha Medhas</h5>
+      <a href="#">Pdf Download</a>
+      <h5>Financial Services</h5>
+      <a href="#">Pdf Download</a>
+      <h5>Iha Brochure</h5>
+      <a href="#">Pdf Download</a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+  <div class="logo-footer container-fluid">
+    <div class="col-sm-12">
+    <a href="#"><i class="fab fa-twitter fab2x"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-google-plus"></i></a>
+    <a href="#"><i class="fab fa-skype"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    
+  </div>
+</div>
+
+
+
+
+  <div class="lower-footer container-fluid">
+    <div class="col-sm-12">
+    <p>Privacy Policy  |   Cookies Policy  |   Terms and Conditions  |   Site Map © 2020 - All Rights Reserved. Website Designed and Developed by Sidhant Kumar</p>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.gallerys').magnificPopup({
+			type:'image',
+			delegate:'a',
+			gallery:{
+				enabled:true
+			}
+		}); 
+	})
+</script>
+
+
+
+
+
+
+	
+<script type="text/javascript">
+  const login_btn = document.querySelector("#login-btn");
+const signup_btn = document.querySelector("#signup-btn");
+const modal_content = document.querySelector(".modal-content");
+
+signup_btn.addEventListener("click", () => {
+  modal_content.classList.add("sign-up-mode");
+});
+
+login_btn.addEventListener("click", () => {
+  modal_content.classList.remove("sign-up-mode");
+});
+</script>
+
+
+
+
+
+<script type="text/javascript">
+  var x = document.getElementById("login");
+  var y = document.getElementById("signup");
+  var z = document.getElementById("btn");
+
+
+function signup(){
+  x.style.left="-400px";
+  y.style.left="80px";
+  z.style.left="110px";
+}
+function login(){
+  x.style.left="80px";
+  y.style.left="450px";
+  z.style.left="0";
+}
+
+
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.toggle2').click(function(){
+        $('.sidebar-contact').toggleClass('active')
+        $('.toggle2').toggleClass('active')
+      })
+    })
+  </script>
+
+
+
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("abc");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
+
+
+</body>
+</html>

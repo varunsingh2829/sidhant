@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>side massage box</title>
+	<link rel="stylesheet" type="text/css" href="sidebarstyle.css">
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div class="sidebar-contact">
+		<div class="toggle"></div>
+		<h2>contact us</h2>
+		<form>
+			<input type="text" name="" value="name">
+			<input type="email" name="" value="email">
+			<input type="rel" name="" value="phone number">
+			<textarea placeholder="message"></textarea>
+			<input type="submit" name="" value="send">
+		</form>
+	</div>
+
+
+	<!-- <script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('click','.toggle',function(){
+				$('.sidebar-contact').toggleClass('active')
+				$('.toggle').toggleClass('active')
+			})
+		})
+	</script> -->
+
+
+
+
+	
+<script type="text/javascript">
+		$(document).ready(function(){
+			$('.toggle').click(function(){
+				$('.sidebar-contact').toggleClass('active')
+				$('.toggle').toggleClass('active')
+			})
+		})
+	</script>
+
+</body>
+</html>
